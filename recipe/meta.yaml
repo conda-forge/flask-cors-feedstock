@@ -1,8 +1,8 @@
 {% set name = "Flask-Cors" %}
-{% set version = "3.0.3" %}
+{% set version = "3.0.4" %}
 {% set bundle = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash = "62ebc5ad80dc21ca0ea9f57466c2c74e24a62274af890b391790c260eb7b754b" %}
+{% set hash = "bec996f0603a0693c0ea63c8126e5f8e966bb679cf82e6104b254e9c7f3a7d08" %}
 {% set build = 0 %}
 
 package:
@@ -15,7 +15,7 @@ source:
   {{ hash_type }}: {{ hash }}
 
 build:
-  number: {{ build }}
+  number: 0
   script: python setup.py install --single-version-externally-managed --record=record.txt
 
 requirements:
