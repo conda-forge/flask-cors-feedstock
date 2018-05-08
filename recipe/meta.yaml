@@ -1,9 +1,8 @@
 {% set name = "Flask-Cors" %}
-{% set version = "3.0.3" %}
+{% set version = "3.0.4" %}
 {% set bundle = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash = "62ebc5ad80dc21ca0ea9f57466c2c74e24a62274af890b391790c260eb7b754b" %}
-{% set build = 0 %}
+{% set hash = "bec996f0603a0693c0ea63c8126e5f8e966bb679cf82e6104b254e9c7f3a7d08" %}
 
 package:
   name: {{ name|lower }}
@@ -11,17 +10,18 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}.{{ bundle }}
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ bundle }}
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ bundle }}
   {{ hash_type }}: {{ hash }}
 
 build:
-  number: {{ build }}
-  script: python setup.py install --single-version-externally-managed --record=record.txt
+  number: 0
+  noarch: python
+  script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
   build:
     - python
-    - setuptools
+    - pip
 
   run:
     - python
