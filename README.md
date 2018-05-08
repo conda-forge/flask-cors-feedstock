@@ -14,9 +14,8 @@ Summary: A Flask extension adding a decorator for CORS support
 Current build status
 ====================
 
-[![Linux](https://img.shields.io/circleci/project/github/conda-forge/flask-cors-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/flask-cors-feedstock)
-[![OSX](https://img.shields.io/travis/conda-forge/flask-cors-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/flask-cors-feedstock)
-[![Windows](https://img.shields.io/appveyor/ci/conda-forge/flask-cors-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/flask-cors-feedstock/branch/master)
+All platforms:
+[![noarch](https://img.shields.io/circleci/project/github/conda-forge/flask-cors-feedstock/master.svg?label=noarch)](https://circleci.com/gh/conda-forge/flask-cors-feedstock)
 
 Current release info
 ====================
