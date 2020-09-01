@@ -1,8 +1,7 @@
 {% set name = "Flask-Cors" %}
-{% set version = "3.0.8" %}
+{% set version = "3.0.9" %}
 {% set bundle = "tar.gz" %}
-{% set hash_type = "sha256" %}
-{% set hash = "72170423eb4612f0847318afff8c247b38bd516b7737adfc10d1c2cdbb382d16" %}
+{% set hash = "6bcfc100288c5d1bcb1dbb854babd59beee622ffd321e444b05f24d6d58466b8" %}
 
 package:
   name: {{ name|lower }}
@@ -11,12 +10,12 @@ package:
 source:
   fn: {{ name }}-{{ version }}.{{ bundle }}
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ bundle }}
-  {{ hash_type }}: {{ hash }}
+  sha256: {{ hash }}
 
 build:
   number: 0
   noarch: python
-  script: python -m pip install --no-deps --ignore-installed .
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   build:
@@ -41,7 +40,7 @@ about:
   license: MIT
   license_file: LICENSE
   license_family: MIT
-  summary: 'A Flask extension adding a decorator for CORS support'
+  summary: A Flask extension adding a decorator for CORS support
   doc_url: http://flask-cors.corydolphin.com/en/latest/
   dev_url: https://github.com/corydolphin/flask-cors
 
