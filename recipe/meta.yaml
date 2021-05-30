@@ -1,17 +1,13 @@
 {% set name = "Flask-Cors" %}
-{% set version = "3.0.8" %}
-{% set bundle = "tar.gz" %}
-{% set hash_type = "sha256" %}
-{% set hash = "72170423eb4612f0847318afff8c247b38bd516b7737adfc10d1c2cdbb382d16" %}
+{% set version = "3.0.10" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.{{ bundle }}
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ bundle }}
-  {{ hash_type }}: {{ hash }}
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: b60839393f3b84a0f3746f6cdca56c1ad7426aa738b70d6c61375857823181de
 
 build:
   number: 0
@@ -20,11 +16,11 @@ build:
 
 requirements:
   build:
-    - python
+    - python >=3.6
     - pip
 
   run:
-    - python
+    - python >=3.6
     - flask >=0.9
     - six
 
@@ -35,6 +31,10 @@ test:
     - flask_cors.decorator
     - flask_cors.extension
     - flask_cors.version
+  commands:
+    - pip check
+  requires: 
+    - pip
 
 about:
   home: https://github.com/corydolphin/flask-cors
@@ -48,3 +48,4 @@ about:
 extra:
   recipe-maintainers:
     - pmlandwehr
+    - jan-janssen
