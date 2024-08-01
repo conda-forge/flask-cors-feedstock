@@ -9,8 +9,6 @@ Package license: MIT
 
 Summary: A Flask extension adding a decorator for CORS support
 
-Documentation: http://flask-cors.corydolphin.com
-
 Current build status
 ====================
 
