@@ -1,30 +1,30 @@
-{% set name = "Flask-Cors" %}
-{% set version = "4.0.0" %}
+{% set version = "4.0.1" %}
 
 package:
-  name: {{ name|lower }}
+  name: flask-cors
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: f268522fcb2f73e2ecdde1ef45e2fd5c71cc48fe03cffb4b441c6d1b40684eb0
+  url: https://pypi.io/packages/source/f/flask-cors/flask_cors-{{ version }}.tar.gz
+  sha256: eeb69b342142fdbf4766ad99357a7f3876a2ceb77689dc10ff912aac06c389e4
 
 build:
   number: 0
   noarch: python
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
+  script: {{ PYTHON }} -m pip install . --no-deps -vv --no-build-isolation
 
 requirements:
   host:
-    - python >=3.6
     - pip
-
+    - python >=3.8
+    - setuptools
   run:
-    - python >=3.6
     - flask >=0.9
-    - six
+    - python >=3.8
 
 test:
+  requires:
+    - pip
   imports:
     - flask_cors
     - flask_cors.core
@@ -33,8 +33,6 @@ test:
     - flask_cors.version
   commands:
     - pip check
-  requires:
-    - pip
 
 about:
   home: https://github.com/corydolphin/flask-cors
@@ -42,10 +40,10 @@ about:
   license_file: LICENSE
   license_family: MIT
   summary: A Flask extension adding a decorator for CORS support
-  doc_url: http://flask-cors.corydolphin.com/en/latest/
-  dev_url: https://github.com/corydolphin/flask-cors
+  doc_url: http://flask-cors.corydolphin.com
 
 extra:
   recipe-maintainers:
     - pmlandwehr
     - jan-janssen
+    - bollwyvl
