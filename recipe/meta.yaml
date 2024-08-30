@@ -1,4 +1,4 @@
-{% set version = "4.0.1" %}
+{% set version = "4.0.2" %}
 
 package:
   name: flask-cors
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/f/flask-cors/flask_cors-{{ version }}.tar.gz
-  sha256: eeb69b342142fdbf4766ad99357a7f3876a2ceb77689dc10ff912aac06c389e4
+  sha256: 493b98e2d1e2f1a4720a7af25693ef2fe32fbafec09a2f72c59f3e475eda61d2
 
 build:
   number: 0
