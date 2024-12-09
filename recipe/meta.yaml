@@ -5,26 +5,27 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/f/flask-cors/flask_cors-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/f/flask-cors/flask_cors-{{ version }}.tar.gz
   sha256: 5aadb4b950c4e93745034594d9f3ea6591f734bb3662e16e255ffbf5e89c88ef
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . --no-deps -vv --no-build-isolation
 
 requirements:
   host:
     - pip
-    - python >=3.8
+    - python {{ python_min }}
     - setuptools
   run:
     - flask >=0.9
-    - python >=3.8
+    - python >={{ python_min }}
 
 test:
   requires:
     - pip
+    - python {{ python_min }}
   imports:
     - flask_cors
     - flask_cors.core
