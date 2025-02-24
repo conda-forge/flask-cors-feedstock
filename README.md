@@ -146,5 +146,3 @@ Feedstock Maintainers
 * [@bollwyvl](https://github.com/bollwyvl/)
 * [@jan-janssen](https://github.com/jan-janssen/)
 * [@pmlandwehr](https://github.com/pmlandwehr/)
-
-<!-- trigger ci -->
