@@ -9,8 +9,10 @@ package:
   version: ${{ version }}
 
 source:
-  url: https://pypi.org/packages/source/f/flask-cors/flask_cors-${{ version }}.tar.gz
-  sha256: 6ccb38d16d6b72bbc156c1c3f192bc435bfcc3c2bc864b2df1eb9b2d97b2403c
+  - url: https://pypi.org/packages/source/f/flask-cors/flask_cors-${{ version }}.tar.gz
+    sha256: 6ccb38d16d6b72bbc156c1c3f192bc435bfcc3c2bc864b2df1eb9b2d97b2403c
+  - url: https://raw.githubusercontent.com/corydolphin/flask-cors/refs/tags/${{ version }}/LICENSE
+    sha256: 134a20d852c0cf9e0f3c228767921b76f4bfc4af4a2fc7c4cc90f6b4fd407b5c
 
 build:
   number: 0
