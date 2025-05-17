@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: 5.0.1
+  version: "6.0.0"
 
 package:
   name: flask-cors
@@ -10,7 +10,7 @@ package:
 
 source:
   - url: https://pypi.org/packages/source/f/flask-cors/flask_cors-${{ version }}.tar.gz
-    sha256: 6ccb38d16d6b72bbc156c1c3f192bc435bfcc3c2bc864b2df1eb9b2d97b2403c
+    sha256: 4592c1570246bf7beee96b74bc0adbbfcb1b0318f6ba05c412e8909eceec3393
   - url: https://raw.githubusercontent.com/corydolphin/flask-cors/refs/tags/${{ version }}/LICENSE
     sha256: 134a20d852c0cf9e0f3c228767921b76f4bfc4af4a2fc7c4cc90f6b4fd407b5c
 
