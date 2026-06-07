@@ -39,7 +39,6 @@ tests:
         - flask_cors.core
         - flask_cors.decorator
         - flask_cors.extension
-        - flask_cors.version
 
 about:
   license: MIT
