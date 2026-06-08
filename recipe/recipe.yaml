@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: "6.0.3"
+  version: "6.0.4"
   python_check_max: "3.14"
 
 package:
@@ -11,12 +11,12 @@ package:
 
 source:
   - url: https://pypi.org/packages/source/f/flask-cors/flask_cors-${{ version }}.tar.gz
-    sha256: d8b13989a630eef065a7b8ff10a183761be5abbb7f001294bd2963e10946cadd
+    sha256: cf3db91a0874aecde0a276565bf4adf4a458edcfd42e668fb0a260549f129317
   - url: https://raw.githubusercontent.com/corydolphin/flask-cors/refs/tags/${{ version }}/LICENSE
     sha256: 134a20d852c0cf9e0f3c228767921b76f4bfc4af4a2fc7c4cc90f6b4fd407b5c
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script:
     - ${{ PYTHON }} -m pip install . --no-deps -vv --no-build-isolation --disable-pip-version-check
