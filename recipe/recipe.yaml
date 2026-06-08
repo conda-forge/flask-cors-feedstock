@@ -58,7 +58,8 @@ about:
   license: MIT
   license_file: LICENSE
   summary: A Flask extension adding a decorator for CORS support
-  homepage: https://github.com/corydolphin/flask-cors
+  homepage: https://pypi.org/project/flask-cors
+  repository: https://github.com/corydolphin/flask-cors
 
 extra:
   recipe-maintainers:
