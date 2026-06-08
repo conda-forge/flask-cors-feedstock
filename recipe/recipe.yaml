@@ -30,6 +30,7 @@ requirements:
   run:
     - flask >=0.9
     - python >=${{ python_min }}
+    - typing_extensions >=4.6.0
     - werkzeug >=0.7
 
 tests:
