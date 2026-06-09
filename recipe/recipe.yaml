@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: "6.0.4"
+  version: "6.0.5"
   python_check_max: "3.14"
 
 package:
@@ -11,7 +11,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/f/flask-cors/flask_cors-${{ version }}.tar.gz
-  sha256: cf3db91a0874aecde0a276565bf4adf4a458edcfd42e668fb0a260549f129317
+  sha256: 30c5031552cd59f620ac0c8211dac45b345d3b2df310e7721879e4f46ef9c601
 
 build:
   number: 0
